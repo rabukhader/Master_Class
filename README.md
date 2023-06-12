@@ -42,7 +42,7 @@ To get started with the Quiz App Flutter project, follow these steps:
 
 
 ```bash
-git clone https://github.com/IbraheemShawhnee/master_class.git
+https://github.com/rabukhader/Master_Class.git
 ```
 
 2- Change into the project directory:
