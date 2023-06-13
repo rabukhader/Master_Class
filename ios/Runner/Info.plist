@@ -45,6 +45,22 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+
+	<array>
+		<dict>
+			<key>CFBunndleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBunndleURLSchemese</key>
+			<array>
+				<string></string>
+			</array>
+
+		</dict>
+	
+	</array>
+
+
+
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>
