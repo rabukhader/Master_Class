@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
+import 'package:master_class/Controllers/auth_controller.dart';
 import 'package:master_class/Controllers/question_paper/question_paper_controller.dart';
 import 'package:master_class/Controllers/zoom_drawer_controller.dart';
 import 'package:master_class/Screens/home/app_icons.dart';
@@ -17,6 +18,7 @@ import 'package:master_class/widgets/content_area.dart';
 class HomeScreen extends GetView<MyZoomDrawerController> {
   const HomeScreen({super.key});
 
+  static const String routeName = "/home";
   @override
   Widget build(BuildContext context) {
     QuestionPaperController questionPaperController = Get.find();
@@ -46,7 +48,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                         children: [
                           AppCircleButtton(
                               onTap: controller.toogleDrawer,
-                              child: Icon(Icons.menu /*AppIcons.menuLeft */)),
+                              child: const Icon(Icons.menu /*AppIcons.menuLeft */)),
                           const SizedBox(
                             height: 10,
                           ),
@@ -59,14 +61,14 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                                       .favorite_outline_outlined /*AppIcons.peace */,
                                 ),
                                 Text(
-                                  "Hello friend",
+                                  "Hello Friend",
                                   style: detailText.copyWith(
                                       color: onSurfaceTextColor),
                                 ),
                               ],
                             ),
                           ),
-                          Text(
+                          const Text(
                             "What do you want to learn today?",
                             style: headerText,
                           ),
