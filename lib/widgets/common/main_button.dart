@@ -40,9 +40,6 @@ class MainButton extends StatelessWidget {
             )
               ),
             ),
-          
-          
-
     );
   }
 }

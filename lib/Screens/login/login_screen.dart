@@ -45,7 +45,7 @@ class LoginScreen extends GetView<AuthController>{
                 top: 0 ,
                 bottom: 0,
                 left: 0,
-                child: SvgPicture.asset("assets/icons/email.svg"),
+                child: SvgPicture.asset("assets/icons/google.svg"),
               ),
               Center(
                 child: Text(
