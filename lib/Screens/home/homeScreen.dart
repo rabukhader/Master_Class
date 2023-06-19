@@ -1,12 +1,9 @@
 // import 'dart:html';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
-import 'package:master_class/Controllers/auth_controller.dart';
 import 'package:master_class/Controllers/question_paper/question_paper_controller.dart';
 import 'package:master_class/Controllers/zoom_drawer_controller.dart';
-import 'package:master_class/Screens/home/app_icons.dart';
 import 'package:master_class/Screens/home/menu_screen.dart';
 import 'package:master_class/Screens/home/question_card.dart';
 import 'package:master_class/config/themes/app_colors.dart';

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:master_class/config/themes/app_colors.dart';
 
@@ -19,7 +18,7 @@ class BackgroundDecoretion extends StatelessWidget {
               gradient: showGradient ? mainGradient() : null),
           child: CustomPaint(painter: BackgroundPainter()),
         )),
-        Positioned(child: child)
+        Positioned.fill(child: SafeArea(child: child,))
       ],
     );
   }
