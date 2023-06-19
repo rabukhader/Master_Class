@@ -28,7 +28,7 @@ class QuestionPaperModel {
         questions = (json['question'] as List)
             .map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>))
             .toList();
-    QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
+  QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
       : id = json.id,
         title = json['title'],
         imageUrl = json['image_url'],
@@ -37,7 +37,7 @@ class QuestionPaperModel {
         question_count = json['question_count'] as int,
         questions = [];
 
-      String timeInMinits()=> "${(timeSeconds / 60).ceil()} mins";
+  String timeInMinits() => "${(timeSeconds / 60).ceil()} mins";
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
@@ -69,6 +69,14 @@ class Questions {
             (json['answers'] as List).map((e) => Answers.fromJson(e)).toList(),
         correctAnswer = json['correct_answer'];
 
+  // ! Ibraheem ~ Wrote Here some stuff! ~ ! //
+  Questions.fromSnapshot(QueryDocumentSnapshot<Map<String, dynamic>> snapshot)
+      : id = snapshot.id,
+        question = snapshot['question'],
+        answers = [],
+        correctAnswer = snapshot['correct_answer'];
+  // ! Ibraheem ~ Wrote Here some stuff! ~ ! //
+  
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
@@ -90,6 +98,10 @@ class Answers {
   Answers.fromJson(Map<String, dynamic> json)
       : identifier = json['identifier'],
         answer = json['Answer'];
+
+  Answers.fromSnapshot(QueryDocumentSnapshot<Map<String, dynamic>> snapshot)
+      : identifier = snapshot['identifier'] as String?,
+        answer = snapshot['answer'] as String?;
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};

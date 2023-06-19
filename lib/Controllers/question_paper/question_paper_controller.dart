@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:master_class/Controllers/auth_controller.dart';
+import 'package:master_class/Screens/question/questions_screen.dart';
 import 'package:master_class/firebase_ref/references.dart';
 import 'package:master_class/models/question_paper_model.dart';
 import 'package:master_class/services/firebase_storage_service.dart';
@@ -48,7 +49,7 @@ class QuestionPaperController extends GetxController {
         //Get.offNamed()
       } else {
          
-        // Get.toNamed()
+        Get.toNamed(QuestionsScreen.routeName, arguments: paper);
       }
     } else {
       _authController.showLoginAlertDialogue();
