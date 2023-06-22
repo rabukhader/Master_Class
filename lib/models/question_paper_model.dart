@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class QuestionPaperModel {
   String id;
   String title;
@@ -5,6 +7,7 @@ class QuestionPaperModel {
   String description;
   int timeSeconds;
   List<Questions>? questions;
+  int question_count;
 
   QuestionPaperModel(
       {required this.id,
@@ -12,24 +15,35 @@ class QuestionPaperModel {
       this.imageUrl,
       required this.description,
       required this.timeSeconds,
+      required this.question_count,
       this.questions});
 
   QuestionPaperModel.fromJson(Map<String, dynamic> json)
       : id = json['id'] as String,
         title = json['title'] as String,
         imageUrl = json['image_url'] as String,
-        description = json['Description'] as String,
+        description = json['description'] as String,
         timeSeconds = json['time_seconds'],
-        questions = (json['questions'] as List)
+        question_count = 0,
+        questions = (json['question'] as List)
             .map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>))
             .toList();
+    QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
+      : id = json.id,
+        title = json['title'],
+        imageUrl = json['image_url'],
+        description = json['description'],
+        timeSeconds = json['time_seconds'],
+        question_count = json['question_count'] as int,
+        questions = [];
 
+      String timeInMinits()=> "${(timeSeconds / 60).ceil()} mins";
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['title'] = title;
     data['image_url'] = imageUrl;
-    data['Description'] = description;
+    data['description'] = description;
     data['time_seconds'] = timeSeconds;
 
     return data;

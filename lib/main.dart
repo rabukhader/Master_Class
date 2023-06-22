@@ -7,16 +7,6 @@ import 'package:master_class/routes/app_routes.dart';
 
 import 'firebase_options.dart';
 
-
-
-/* Future <void> main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(GetMaterialApp(
-    home: DataUploaderScreen(),
-  ));
-} */
-
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
