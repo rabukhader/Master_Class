@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:master_class/Controllers/question_paper/questions_controller.dart';
+import 'package:master_class/Screens/question/test_overview_screen.dart';
 import 'package:master_class/config/themes/app_colors.dart';
 import 'package:master_class/config/themes/custom_text_styles.dart';
 import 'package:master_class/config/themes/ui_parameters.dart';
@@ -10,6 +11,7 @@ import 'package:master_class/widgets/common/custom_app_bar.dart';
 import 'package:master_class/widgets/common/main_button.dart';
 import 'package:master_class/widgets/common/question_place_holder.dart';
 import 'package:master_class/widgets/questions/answer_card.dart';
+import 'package:master_class/widgets/questions/countdown_timer.dart';
 
 import '../../widgets/content_area.dart';
 
@@ -29,7 +31,10 @@ class QuestionsScreen extends GetView<QuestionsController> {
                     shape: StadiumBorder(
                         side: BorderSide(color: onSurfaceTextColor, width: 2))),
                 child: Obx(
-                  () => Text(controller.time.value),
+                  () => CountdownTimer(
+                    time: controller.time.value,
+                    color: onSurfaceTextColor,
+                  ),
                 )),
             showActionIcon: true,
             titleWidget: Obx(
@@ -124,7 +129,8 @@ class QuestionsScreen extends GetView<QuestionsController> {
                                   child: MainButton(
                                     onTap: () {
                                       controller.isLastQuestion
-                                          ? Container()
+                                          ?Get.toNamed(
+                                              TestOverviewScreen.routeName)
                                           : controller.nextQuestion();
                                     },
                                     title: controller.isLastQuestion

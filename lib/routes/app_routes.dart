@@ -5,7 +5,10 @@ import 'package:master_class/Controllers/zoom_drawer_controller.dart';
 import 'package:master_class/Screens/home/homeScreen.dart';
 import 'package:master_class/Screens/introduction/introduction.dart';
 import 'package:master_class/Screens/login/login_screen.dart';
+import 'package:master_class/Screens/question/answer_check_screen.dart';
 import 'package:master_class/Screens/question/questions_screen.dart';
+import 'package:master_class/Screens/question/result_screen.dart';
+import 'package:master_class/Screens/question/test_overview_screen.dart';
 import 'package:master_class/Screens/splash/splash.dart';
 
 class AppRoutes {
@@ -27,10 +30,20 @@ class AppRoutes {
           page: () => LoginScreen(),
         ),
         GetPage(
-            name: QuestionsScreen.routeName,
-            page: () => QuestionsScreen(),
-            binding: BindingsBuilder(() {
-              Get.put(QuestionsController());
-            }))
+          name: QuestionsScreen.routeName,
+          page: () => QuestionsScreen(),
+          binding: BindingsBuilder(() {
+            Get.put<QuestionsController>(QuestionsController());
+          }),
+        ),
+        GetPage(
+          name: TestOverviewScreen.routeName, page: () => const TestOverviewScreen()
+          ),
+          GetPage(
+          name: ResultScreen.routeName, page: () => const ResultScreen()
+          ), 
+          GetPage(
+          name: AsnwerCheckScreen.routeName, page: () => const AsnwerCheckScreen()
+          )
       ];
 }

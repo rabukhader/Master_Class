@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:master_class/Screens/home/app_icons.dart';
+import 'package:master_class/Screens/question/test_overview_screen.dart';
 import 'package:master_class/config/themes/custom_text_styles.dart';
 import 'package:master_class/config/themes/ui_parameters.dart';
 import 'package:master_class/widgets/app_circle_button.dart';
@@ -49,7 +51,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Transform.translate(
                     offset: const Offset(10, 0),
                     child: AppCircleButtton(
-                      onTap: onMenuActionTap??null,
+                      onTap: onMenuActionTap??()=>Get.toNamed(TestOverviewScreen.routeName),
                       child: const Icon(Icons.menu_open),
                     ),
                   )
