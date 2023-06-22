@@ -24,3 +24,4 @@ TextStyle countDownTimerTs() => TextStyle(
   color: UIParameters.isDarkMode()?Theme.of(Get.context!).textTheme.bodyText1!.color:Theme.of(Get.context!).primaryColor
 
 );
+

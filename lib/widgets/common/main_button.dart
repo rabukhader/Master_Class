@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:master_class/config/themes/app_colors.dart';
 
 class MainButton extends StatelessWidget {
@@ -35,6 +36,7 @@ class MainButton extends StatelessWidget {
                   child: Text(title, style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Get.isDarkMode?onSurfaceTextColor:Theme.of(context).primaryColor,
+
                     ),),
                 ),
               ),

@@ -67,6 +67,7 @@ class AuthController extends GetxController {
       navigateToHomePage();
     } on FirebaseAuthException catch (e) {
       // AppLogger.e(e);
+
     }
   }
 

@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:master_class/Controllers/question_paper/question_paper_controller.dart';
 import 'package:master_class/Controllers/question_paper/questions_controller.dart';
+
 import 'package:master_class/Controllers/zoom_drawer_controller.dart';
 import 'package:master_class/Screens/home/homeScreen.dart';
 import 'package:master_class/Screens/introduction/introduction.dart';
@@ -44,6 +45,7 @@ class AppRoutes {
           ), 
           GetPage(
           name: AsnwerCheckScreen.routeName, page: () => const AsnwerCheckScreen()
+
           )
       ];
 }

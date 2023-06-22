@@ -23,23 +23,9 @@ class Dialogs{
                     ), 
       actions: [
         TextButton(onPressed: onTap, child: const Text("Confirm", style: TextStyle(color: Color(0XFff85187), fontWeight: FontWeight.w500, fontFamily: AutofillHints.familyName), )),
+
       ],
     );
   }
 }
 
-// Column(
-//         mainAxisSize: MainAxisSize.min,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           Text(
-//             "Hi...",
-//             style: TextStyle(
-//               fontSize: 25, fontWeight: FontWeight.bold
-//             ),
-//         5  ),
-//           Text(
-//             "Please login before you start"
-//           ),
-//         ],
-//       ),

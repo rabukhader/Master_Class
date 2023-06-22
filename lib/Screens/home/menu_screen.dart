@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:master_class/Controllers/zoom_drawer_controller.dart';
@@ -145,6 +146,7 @@ class MyMenuScreen extends GetView<MyZoomDrawerController> {
                     //   label: "Logout",
                     //   onPressed: () => controller.signOut(),
                     // ),
+
                   ],
                 ),
               )
@@ -175,6 +177,7 @@ class _DrawerButton extends StatelessWidget {
         style:
             const TextStyle(fontSize: 25, fontFamily: AutofillHints.nickname),
       ),
+
     );
   }
 }
