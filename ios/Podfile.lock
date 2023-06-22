@@ -767,6 +767,7 @@ PODS:
     - Flutter
     - FlutterMacOS
   - PromisesObjC (2.2.0)
+
   - sqflite (0.0.3):
     - Flutter
     - FMDB (>= 2.7.5)
@@ -799,6 +800,7 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseStorage
     - FMDB
+
     - GoogleSignIn
     - GoogleUtilities
     - "gRPC-C++"
@@ -863,6 +865,7 @@ SPEC CHECKSUMS:
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
   url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+
 
 PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
 
