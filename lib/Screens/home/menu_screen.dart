@@ -2,15 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:master_class/Controllers/auth_controller.dart';
 import 'package:master_class/Controllers/zoom_drawer_controller.dart';
 import 'package:master_class/config/themes/app_colors.dart';
 import 'package:master_class/config/themes/ui_parameters.dart';
 
 class MyMenuScreen extends GetView<MyZoomDrawerController> {
   const MyMenuScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
+    bool isSignedIn = Get.find<AuthController>().isLoggedIn();
     return Container(
       padding: UIParameters.mobileScreenPadding,
       width: double.maxFinite,
@@ -113,16 +114,18 @@ class MyMenuScreen extends GetView<MyZoomDrawerController> {
                                     fontWeight: FontWeight.w900,
                                     fontSize: 18,
                                     color: onSurfaceTextColor))),
-                        ListTile(
-                            onTap: () => controller.signOut(),
-                            leading:
-                                const Icon(Icons.logout, color: Colors.white),
-                            title: const Text("Logout",
-                                style: TextStyle(
-                                    fontFamily: AutofillHints.nickname,
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 18,
-                                    color: onSurfaceTextColor)))
+                        isSignedIn
+                            ? ListTile(
+                                onTap: () => controller.signOut(),
+                                leading: const Icon(Icons.logout,
+                                    color: Colors.white),
+                                title: const Text("Logout",
+                                    style: TextStyle(
+                                        fontFamily: AutofillHints.nickname,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 18,
+                                        color: onSurfaceTextColor)))
+                            : const Text("")
                       ],
                     ))
                     // _DrawerButton(
@@ -146,7 +149,6 @@ class MyMenuScreen extends GetView<MyZoomDrawerController> {
                     //   label: "Logout",
                     //   onPressed: () => controller.signOut(),
                     // ),
-
                   ],
                 ),
               )
@@ -177,7 +179,6 @@ class _DrawerButton extends StatelessWidget {
         style:
             const TextStyle(fontSize: 25, fontFamily: AutofillHints.nickname),
       ),
-
     );
   }
 }

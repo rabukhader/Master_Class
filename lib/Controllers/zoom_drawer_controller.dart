@@ -36,7 +36,9 @@ class MyZoomDrawerController extends GetxController {
     final Uri emailLaunchUri = Uri(scheme: 'mailto', path: 'info@dbestech.com');
     _launch(emailLaunchUri.toString());
   }
-
+  void isSignedIn() {
+    
+  }
   Future<void> _launch(String url) async {
     if (!await launch(url)) {
       throw 'could not launch $url';
