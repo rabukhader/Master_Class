@@ -33,6 +33,7 @@ class AuthController extends GetxController {
   signInWithGoogle() async {
     final GoogleSignIn _googleSignIn = GoogleSignIn();
     try {
+      await _googleSignIn.disconnect();
       GoogleSignInAccount? account = await _googleSignIn.signIn();
       if (account != null) {
         final _authAccount = await account.authentication;
@@ -67,7 +68,6 @@ class AuthController extends GetxController {
       navigateToHomePage();
     } on FirebaseAuthException catch (e) {
       // AppLogger.e(e);
-
     }
   }
 
