@@ -77,7 +77,7 @@ This project is inspired by the need for a quiz application to facilitate learni
 
 
 ## Contact 📬
-If you have any questions or suggestions regarding the Instagram Clone Flutter project, feel free to contact us at 
+If you have any questions or suggestions regarding to Master Class Flutter project, feel free to contact us at 
 - Ibraheem Shawhnee[![githhub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IbraheemShawhnee)
 - Rasheed AbuKhader[![githhub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rabukhader)
 - Raneem AbuAlrob[![githhub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Raaneeem)
